@@ -7,7 +7,7 @@ class LifeCycleExemple extends Component
 	{
    super(props);
    this.state={
-  	time: new Date
+  	time: new Date()
   }
 
 	}
@@ -17,7 +17,7 @@ class LifeCycleExemple extends Component
 
 		setInterval( ()=>{
 		 this.setState({ 
-		 	time: new Date
+		 	time: new Date()
 
 		 	 })
 
