@@ -14,9 +14,10 @@ class Api extends Component
       })
   }
 
+
 	render(){
 		return ( <ul> 
-        { this.state.persons.map(person => <li>{person.name}  || {person.email} ||{person.phone} </li>)}
+        { this.state.persons.map(person => <li key={person.id}>{person.name}  || {person.email} ||{person.phone} </li>)}
       </ul>)
 	}
 }

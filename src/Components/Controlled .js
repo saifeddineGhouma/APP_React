@@ -7,36 +7,33 @@ class Controlled extends Component
 		value:"",
 		test:'test success',
 		selectValue:'codingnter',
-		checked:false
+		radio_value:"1"
 	}
 	setValue =(event)=>
 	{
+		const name=event.target.name
 
     this.setState({
-    	value:event.target.value
+    	[name]:event.target.value
     })
-console.log(event.target.value)
  	}
 
- 	selectValue_edit =(event)=>
- 	{
- 		 this.setState({
-    	selectValue:event.target.value
-    })
- 	}
+ 	
+ 	 
+ 
 	render()
 	{
 		return <div>
 		<h1>Controlled Component :   {this.state.value}</h1>
 
-         <input type="text" value={this.state.value} onChange={this.setValue}/>
+         <input name="value" type="text" value={this.state.value} onChange={this.setValue}/>
 <br/>
 <br/>
-         <textarea value={this.state.value} onChange={this.setValue}/>
+         <textarea name="value" value={this.state.value} onChange={this.setValue}/>
          <br/>
 <br/>
 
-<select  value={this.state.selectValue} onChange={this.selectValue_edit}>
+<select name="selectValue" value={this.state.selectValue} onChange={this.setValue}>
 <option value="laravel">laravel</option>
 <option value="symfony">symfony</option>
 <option value="codingnter">codingnter</option>
@@ -45,7 +42,16 @@ console.log(event.target.value)
 </select>
 <br/>
 <br/>
-         <input type="checkbox" checked={this.state.checked}/>
+      
+
+         <br/>
+         <br/>
+         <div onChange={this.setValue}>
+               <input type="radio" name="radio_value"  value="1" defaultChecked defaultChecked ={this.state.radio_value === "1"} /> One <br/>
+
+                <input type="radio" name="radio_value" value="2"  defaultChecked ={this.state.radio_value === "2"} />Two <br/>
+
+          </div>
 
 		</div>
 	}

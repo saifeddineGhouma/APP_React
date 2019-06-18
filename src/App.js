@@ -8,12 +8,16 @@ import Test from './Components/Test'
 import TodoListe from './Components/TodoListe'
 import Controlled from './Components/Controlled '
 import Api  from './Components/Api'
+import FormikForm from './Components/FormikForm'
 import './App.css';
 
 function App() {
   return (
     <div className="App">
          <h1>  React Js </h1>
+
+<FormikForm/>
+         <hr/>
 
          <Api/>
 
