@@ -1,10 +1,6 @@
 import React ,{ Component } from 'react';
 
-function usersComponen(props)
 
-{
-	
-}
 class Test  extends Component      
 {
 
